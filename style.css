@@ -4,7 +4,7 @@
 }
 
 body {
-    font-family: "Roboto", sans-serif;
+    /* font-family: "Roboto", sans-serif; */
 }
 
 header {
@@ -12,6 +12,7 @@ header {
     align-items: center;
     width: 100%;
     border-bottom: 1px solid #0C0F86;
+    margin-top: 20px;
 }
 
 .details {
@@ -21,7 +22,7 @@ header {
     justify-content: space-around;
     align-self: end;
     margin-bottom: 4px;
-    padding-top: 18vh
+    /* padding-top: 18vh */
 }
 
 .phone {
@@ -50,17 +51,41 @@ header {
     width: 100%;
     border-bottom: 1px solid #0C0F86;
     margin-top: 8px;
-    padding-bottom: 8px;
 }
 
 .navigation {
+    background-image: linear-gradient( to right, #0C0F86, #0C0F86 50%, #000 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Inter';
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 15px;
-    line-height: 40px;
+    line-height: 36px;
     text-align: center;
     text-transform: uppercase;
-    color: #000000;
+}
+
+.navigation:before {
+    content: '';
+    background: #0C0F86;
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navigation:hover::before {
+    width: 100%;
 }
 
 .subnav {
@@ -75,7 +100,6 @@ header {
     height: 36px;
     background: #DAEEFF;
     justify-content: center;
-    align-items: stretch;
 }
 
 form.search-box {
@@ -113,16 +137,16 @@ input.search-box {
     top: 50%;
     left: 20%;
     transform: translate(-50%, -50%);
-    text-align: center;
 }
 
 .text {
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 56px;
     text-align: justify;
     color: #FFFFFF;
+    line-height: 120%;
 }
 
 .text1 {
